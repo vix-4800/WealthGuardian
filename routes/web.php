@@ -24,4 +24,5 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', [ProfileController::class, 'dashboard'])->name('dashboard');
+    Route::get('account/{accountId}', [ProfileController::class, 'account'])->name('account');
 });
