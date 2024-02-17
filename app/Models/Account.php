@@ -25,4 +25,8 @@ class Account extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
+    public function expenses(): HasMany
+    {
+        return $this->hasMany(Expense::class, 'account_id');
+    }
 }
