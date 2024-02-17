@@ -20,8 +20,14 @@ class PageController extends Controller
     {
         return view("pages.contact");
     }
+
     public function plans()
     {
         return view("pages.plans");
+    }
+
+    public function features()
+    {
+        return view("pages.features");
     }
 }
