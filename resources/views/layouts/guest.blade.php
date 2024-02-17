@@ -71,7 +71,7 @@
                         <x-nav-item name='Home' route='main' />
 
                         <x-nav-item name='About' route='about' />
-
+                        <x-nav-item name='Plans' route='plans' />
                         <x-nav-item name='Contact' route='contact' />
 
                         <x-nav-item name='Plans' route='contact' />
