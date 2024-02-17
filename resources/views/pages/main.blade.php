@@ -8,9 +8,9 @@
                     freedom.
                 </h1>
                 <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-                    Master your finances with WealthGuardian, the intuitive Personal Finance Tracker.
+                    Master your finances with Wealth Guardian, the intuitive Personal Finance Tracker.
                     This intuitive app is meticulously crafted with user-friendly features, utilizing advanced technologies
-                    for seamless financial management. WealthGuardian simplifies income tracking,
+                    for seamless financial management. Wealth Guardian simplifies income tracking,
                     expense management, and budgeting, offering you a holistic view of your financial landscape.
                 </p>
                 <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
@@ -40,7 +40,7 @@
                     </p>
                     <p class="mb-8 font-light lg:text-xl">
                         Streamline development workflows, enhance knowledge management, and achieve seamless
-                        continuous integration and deployment. Experience fast service delivery with WealthGuardian –
+                        continuous integration and deployment. Experience fast service delivery with Wealth Guardian –
                         simplicity without compromise.
                     </p>
                 </div>
@@ -95,8 +95,7 @@
             </div>
         </div>
     </section>
-    <!-- End block -->
-    <!-- Start block -->
+
     <section class="bg-white dark:bg-gray-900">
         <div class="items-center max-w-screen-xl px-4 py-8 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-6">
             <div class="col-span-2 mb-8">
@@ -154,8 +153,7 @@
             </div>
         </div>
     </section>
-    <!-- End block -->
-    <!-- Start block -->
+
     <section class="bg-gray-50 dark:bg-gray-800">
         <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-24 lg:px-6">
             <figure class="max-w-screen-md mx-auto">
@@ -170,7 +168,7 @@
                     </p>
                 </blockquote>
                 <figcaption class="flex items-center justify-center mt-6 space-x-3">
-                    <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture">
+                    <img class="w-6 h-6 rounded-full" src="{{asset('img/main_page_review.png')}}" alt="profile picture">
                     <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
                         <div class="pr-3 font-medium text-gray-900 dark:text-white">
                             John Smith
@@ -183,13 +181,18 @@
             </figure>
         </div>
     </section>
-    <!-- End block -->
-    <!-- Start block -->
+
     <section class="bg-white dark:bg-gray-900">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
             <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
-                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Designed for business teams like yours</h2>
-                <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Here at Landwind we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                    Tailored for financial success
+                </h2>
+                <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
+                    Wealth Guardian is dedicated to serving business teams like yours.
+                    Our focus lies in sectors where technology, innovation, and strategic financial management
+                    can unlock enduring value and fuel sustained economic growth
+                </p>
             </div>
             <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
                 <!-- Pricing Card -->
