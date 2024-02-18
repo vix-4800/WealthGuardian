@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SubscriptionPlan;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function main()
     {
-        return view("pages.main");
+        $plans = SubscriptionPlan::with('features')->get();
+
+        return view("pages.main", compact('plans'));
     }
 
     public function about()
