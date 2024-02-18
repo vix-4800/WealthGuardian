@@ -17,7 +17,7 @@ class Account extends Model
         'name',
         'user_id',
         'bank',
-        'balance'
+        'balance',
     ];
 
     public function user(): BelongsTo

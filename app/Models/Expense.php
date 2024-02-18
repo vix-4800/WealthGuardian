@@ -17,7 +17,7 @@ class Expense extends Model
         'account_id',
         'type',
         'amount',
-        'date'
+        'date',
     ];
 
     public function account(): BelongsTo
