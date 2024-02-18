@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,11 +12,12 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $seeders = [
-            SubscriptionPlanSeeder::class
+            SubscriptionPlanSeeder::class,
+            SubscriptionPlanFeatureSeeder::class,
         ];
 
         foreach ($seeders as $seeder) {
             $this->call($seeder);
-        };
+        }
     }
 }
