@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('subscription_plan_features', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('subscription_plan_id')->constrained('subscription_plan')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('subscription_plan_id')->constrained('subscription_plans')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('feature');
 
             $table->timestamps();
