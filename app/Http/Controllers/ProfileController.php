@@ -14,11 +14,13 @@ class ProfileController extends Controller
         return view('dashboard', compact('accounts'));
     }
 
-    public function account(int $accountId)
+    public function select(int $accountId)
     {
         $account = Account::find($accountId);
         $expenses = $account->expenses;
+        $incomes = $account->incomes;
 
-        return view('profile.account', compact('account', 'expenses'));
+        return view('pages.profile.accounts.view', compact('account', 'expenses', 'incomes'));
+    }
     }
 }
