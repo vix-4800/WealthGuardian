@@ -99,34 +99,48 @@
                     </h3>
                     <ul class="text-gray-500 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="#" class=" hover:underline">
+                            <a href="https://github.com/vix-4800" class=" hover:underline">
                                 About
                             </a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Blog</a>
+                            <a href="https://vix-4800.github.io" class="hover:underline">
+                                Blog
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h3>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                        Help center
+                    </h3>
                     <ul class="text-gray-500 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Contact Us</a>
+                            <a href="{{route('contact')}}" class="hover:underline">
+                                Contact Us
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h3>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                        Legal
+                    </h3>
                     <ul class="text-gray-500 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Privacy Policy</a>
+                            <a href="#" class="hover:underline">
+                                Privacy Policy
+                            </a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Licensing</a>
+                            <a href="#" class="hover:underline">
+                                Licensing
+                            </a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Terms</a>
+                            <a href="#" class="hover:underline">
+                                Terms
+                            </a>
                         </li>
                     </ul>
                 </div>
