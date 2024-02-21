@@ -10,6 +10,8 @@ class SubscriptionPlanFeature extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = [
         'subscription_plan_id',
         'feature',

@@ -16,8 +16,6 @@ return new class extends Migration
 
             $table->foreignId('subscription_plan_id')->constrained('subscription_plans')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('feature');
-
-            $table->timestamps();
         });
     }
 
