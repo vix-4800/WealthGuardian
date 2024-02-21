@@ -15,6 +15,8 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        return auth()->user()->admin == true ? $next($request) : back();
+        abort_unless(auth()->user()->isAdmin(), Response::HTTP_UNAUTHORIZED, 'You are not allowed to access this page.');
+
+        return $next($request);
     }
 }

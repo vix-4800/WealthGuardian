@@ -53,6 +53,10 @@ use Laravel\Sanctum\HasApiTokens;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereTwoFactorSecret($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  *
+ * @property bool $admin
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereAdmin($value)
+ *
  * @mixin \Eloquent
  */
 class User extends Authenticatable
@@ -72,7 +76,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'admin'
+        'admin',
     ];
 
     /**
@@ -94,7 +98,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'admin' => 'boolean'
+        'admin' => 'boolean',
     ];
 
     /**
@@ -105,6 +109,11 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function isAdmin(): bool
+    {
+        return $this->admin === true;
+    }
 
     public function accounts(): HasMany
     {
