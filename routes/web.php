@@ -19,6 +19,10 @@ Route::middleware([
 
     Route::name('accounts.')->prefix('accounts')->group(function () {
         Route::get('/', 'accounts')->name('show');
+
+        Route::get('/add', 'add')->name('add');
+        Route::post('/add', 'store')->name('store');
+
         Route::get('/{accountId}', 'select')->name('select');
     });
 });

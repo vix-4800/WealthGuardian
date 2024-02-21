@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AccountMakeRequest;
 use App\Models\Account;
 
 class ProfileController extends Controller
@@ -37,6 +38,22 @@ class ProfileController extends Controller
         return view('pages.profile.accounts.accounts', [
             'accounts' => auth()->user()->accounts,
         ]);
+    }
+
+    public function add()
+    {
+        return view('pages.profile.accounts.add');
+    }
+
+    public function store(AccountMakeRequest $request)
+    {
+        Account::create([
+            'user_id' => auth()->id(),
+            'name' => $request['name'],
+            'balance' => $request['balance'],
+        ]);
+
+        return redirect()->route('accounts.show');
     }
 
     public function select(int $accountId)
