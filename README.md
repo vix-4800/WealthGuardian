@@ -4,7 +4,7 @@ Wealth Guardian is your trusted companion on the journey to financial prosperity
 
 ## Installation
 
-### Using Makefile
+### Using Makefile and Docker
 
 1. `make install` - install the application dependencies
 2. `make start` - start the application
