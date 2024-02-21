@@ -1,8 +1,13 @@
 {
-    "name": "laravel/laravel",
+    "name": "vix-4800/wealth-guardian",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Personal Finance Tracker app for effective money management and budget planning.",
+    "keywords": [
+        "laravel",
+        "finance",
+        "budget",
+        "tracker"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",
