@@ -8,4 +8,5 @@ Route::middleware([
     'verified',
 ])->controller(App\Http\Controllers\AdminController::class)->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', 'dashboard')->name('dashboard');
+    Route::get('/users', 'users')->name('users');
 });
