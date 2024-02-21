@@ -28,4 +28,9 @@ class Account extends Model
     {
         return $this->hasMany(Expense::class, 'account_id');
     }
+
+    public function incomes(): HasMany
+    {
+        return $this->hasMany(Income::class, 'account_id');
+    }
 }
