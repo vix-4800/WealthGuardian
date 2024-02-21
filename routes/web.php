@@ -24,5 +24,7 @@ Route::middleware([
         Route::post('/add', 'store')->name('store');
 
         Route::get('/{accountId}', 'select')->name('select');
+
+        Route::get('/{account}/delete', 'delete')->name('delete');
     });
 });

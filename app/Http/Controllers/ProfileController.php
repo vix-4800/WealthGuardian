@@ -64,5 +64,11 @@ class ProfileController extends Controller
 
         return view('pages.profile.accounts.view', compact('account', 'expenses', 'incomes'));
     }
+
+    public function delete(Account $account)
+    {
+        $account->delete();
+
+        return back();
     }
 }
