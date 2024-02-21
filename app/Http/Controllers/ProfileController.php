@@ -32,6 +32,13 @@ class ProfileController extends Controller
         ]);
     }
 
+    public function accounts()
+    {
+        return view('pages.profile.accounts.accounts', [
+            'accounts' => auth()->user()->accounts,
+        ]);
+    }
+
     public function select(int $accountId)
     {
         $account = Account::find($accountId);

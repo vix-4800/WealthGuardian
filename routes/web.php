@@ -18,6 +18,7 @@ Route::middleware([
     Route::get('/dashboard', 'dashboard')->name('dashboard');
 
     Route::name('accounts.')->prefix('accounts')->group(function () {
+        Route::get('/', 'accounts')->name('show');
         Route::get('/{accountId}', 'select')->name('select');
     });
 });
