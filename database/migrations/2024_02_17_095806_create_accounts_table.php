@@ -17,7 +17,6 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('name');
             $table->integer('balance');
-            $table->string('bank')->nullable();
 
             $table->timestamps();
         });
