@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Profile;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AccountMakeRequest;
 use App\Models\Account;
+use App\Services\AccountService;
 
 class AccountController extends Controller
 {
@@ -22,12 +23,9 @@ class AccountController extends Controller
 
     public function store(AccountMakeRequest $request)
     {
-        Account::create([
-            'user_id' => auth()->id(),
-            'name' => $request['name'],
-            'balance' => $request['balance'],
-            'type' => $request['type'],
-        ]);
+        $validated = $request->validated();
+
+        (new AccountService)->store($validated);
 
         return redirect()->route('accounts.show');
     }
