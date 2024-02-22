@@ -35,7 +35,11 @@ class AccountController extends Controller
         $expenses = $account->expenses;
         $incomes = $account->incomes;
 
-        return view('pages.profile.accounts.showSelected', compact('account', 'expenses', 'incomes'));
+        return view('pages.profile.accounts.showSelected', [
+            'account' => $account,
+            'expenses' => $expenses,
+            'incomes' => $incomes,
+        ]);
     }
 
     public function delete(Account $account)
