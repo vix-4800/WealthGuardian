@@ -126,6 +126,17 @@ class User extends Authenticatable
     {
         return $this->hasOne(SubscriptionPlan::class);
     }
+
+    public function expensesTypes(): HasMany
+    {
+        return $this->hasMany(ExpenseType::class);
+    }
+
+    public function incomeTypes(): HasMany
+    {
+        return $this->hasMany(IncomeType::class);
+    }
+
     public function bankCards(): HasMany
     {
         return $this->hasMany(BankCard::class);

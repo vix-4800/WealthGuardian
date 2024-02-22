@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('incomes', function (Blueprint $table) {
+        Schema::create('expenses', function (Blueprint $table) {
             $table->id();
 
             $table->foreignId('account_id')->constrained('accounts')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('name');
-            $table->string('type');
+            $table->foreignId('type_id')->nullable()->constrained('expense_types')->cascadeOnDelete()->cascadeOnUpdate();
             $table->integer('amount');
             $table->date('date');
 
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('incomes');
+        Schema::dropIfExists('expenses');
     }
 };

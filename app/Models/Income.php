@@ -40,13 +40,13 @@ class Income extends Model
     protected $fillable = [
         'name',
         'account_id',
-        'type',
+        'type_id',
         'amount',
         'date',
     ];
 
     public function account(): BelongsTo
     {
-        return $this->belongsTo(Account::class, 'account_id');
+        return $this->belongsTo(Account::class);
     }
 }
