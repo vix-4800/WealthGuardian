@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 
 /**
  * App\Models\Account
@@ -33,6 +32,12 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * @method static \Illuminate\Database\Eloquent\Builder|Account whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Account whereUserId($value)
  *
+ * @property string $type
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\BankCard> $bankCards
+ * @property-read int|null $bank_cards_count
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Account whereType($value)
+ *
  * @mixin \Eloquent
  */
 class Account extends Model
@@ -40,15 +45,18 @@ class Account extends Model
     use HasFactory;
 
     public const TYPE_CARD = 'card';
+
     public const TYPE_CASH = 'cash';
+
     public const TYPE_E_WALLET = 'e-wallet';
+
     public const TYPE_DEPOSIT = 'deposit';
 
     protected $fillable = [
         'name',
         'user_id',
         'balance',
-        'type'
+        'type',
     ];
 
     public function user(): BelongsTo

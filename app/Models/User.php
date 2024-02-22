@@ -58,6 +58,17 @@ use Laravel\Sanctum\HasApiTokens;
  *
  * @method static \Illuminate\Database\Eloquent\Builder|User whereAdmin($value)
  *
+ * @property int $subscription_player_id
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\BankCard> $bankCards
+ * @property-read int|null $bank_cards_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\ExpenseType> $expensesTypes
+ * @property-read int|null $expenses_types_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\IncomeType> $incomeTypes
+ * @property-read int|null $income_types_count
+ * @property-read \App\Models\SubscriptionPlan|null $subscriptionPlan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereSubscriptionPlayerId($value)
+ *
  * @mixin \Eloquent
  */
 class User extends Authenticatable
@@ -78,7 +89,7 @@ class User extends Authenticatable
         'email',
         'password',
         'admin',
-        'subscription_player_id'
+        'subscription_player_id',
     ];
 
     /**
@@ -119,7 +130,7 @@ class User extends Authenticatable
 
     public function accounts(): HasMany
     {
-        return $this->hasMany(Account::class,);
+        return $this->hasMany(Account::class);
     }
 
     public function subscriptionPlan(): HasOne

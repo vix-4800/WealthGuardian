@@ -21,6 +21,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionPlanFeature whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionPlanFeature whereSubscriptionPlanId($value)
  *
+ * @property string $name
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionPlanFeature whereName($value)
+ *
  * @mixin \Eloquent
  */
 class SubscriptionPlanFeature extends Model

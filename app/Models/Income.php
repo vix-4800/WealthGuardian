@@ -31,6 +31,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|Income whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Income whereUpdatedAt($value)
  *
+ * @property int|null $type_id
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Income whereTypeId($value)
+ *
  * @mixin \Eloquent
  */
 class Income extends Model

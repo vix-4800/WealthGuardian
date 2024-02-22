@@ -31,6 +31,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|Expense whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Expense whereUpdatedAt($value)
  *
+ * @property int|null $type_id
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Expense whereTypeId($value)
+ *
  * @mixin \Eloquent
  */
 class Expense extends Model
