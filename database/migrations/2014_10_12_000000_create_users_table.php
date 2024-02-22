@@ -22,6 +22,7 @@ return new class extends Migration
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
             $table->boolean('admin')->default(false);
+            $table->foreignId('subscription_player_id')->default(1)->constrained('subscription_plans')->cascadeOnDelete()->cascadeOnUpdate();
 
             $table->timestamps();
         });
