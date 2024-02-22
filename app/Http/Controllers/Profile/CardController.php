@@ -8,7 +8,7 @@ class CardController extends Controller
 {
     public function cards()
     {
-        return view('pages.profile.cards.show', [
+        return view('pages.profile.cards.showAll', [
             'cards' => auth()->user()->bankCards,
         ]);
     }
