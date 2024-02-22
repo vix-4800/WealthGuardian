@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->foreignId('subscription_plan_id')->constrained('subscription_plans')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->string('feature');
+            $table->string('name');
         });
     }
 

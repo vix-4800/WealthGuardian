@@ -15,55 +15,55 @@ class SubscriptionPlanFeatureSeeder extends Seeder
         // First plan
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 1,
-            'feature' => 'Individual configuration',
+            'name' => 'Individual configuration',
         ]);
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 1,
-            'feature' => 'Essential budgeting tools',
+            'name' => 'Essential budgeting tools',
         ]);
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 1,
-            'feature' => 'Limited expense categories',
+            'name' => 'Limited expense categories',
         ]);
 
         // Second plan
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 2,
-            'feature' => 'Individual and family configurations',
+            'name' => 'Individual and family configurations',
         ]);
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 2,
-            'feature' => 'Advanced budgeting and expense management',
+            'name' => 'Advanced budgeting and expense management',
         ]);
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 2,
-            'feature' => 'Customizable expense categories',
+            'name' => 'Customizable expense categories',
         ]);
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 2,
-            'feature' => 'Multi-device synchronization',
+            'name' => 'Multi-device synchronization',
         ]);
 
         // Third plan
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 3,
-            'feature' => 'Individual, family, and business configurations',
+            'name' => 'Individual, family, and business configurations',
         ]);
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 3,
-            'feature' => 'Comprehensive budgeting and expense tracking',
+            'name' => 'Comprehensive budgeting and expense tracking',
         ]);
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 3,
-            'feature' => 'Unlimited customizable expense categories',
+            'name' => 'Unlimited customizable expense categories',
         ]);
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 3,
-            'feature' => 'Multi-device synchronization',
+            'name' => 'Multi-device synchronization',
         ]);
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 3,
-            'feature' => 'Advanced financial insights and analytics',
+            'name' => 'Advanced financial insights and analytics',
         ]);
     }
 }

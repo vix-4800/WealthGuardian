@@ -31,7 +31,7 @@ class SubscriptionPlanFeature extends Model
 
     protected $fillable = [
         'subscription_plan_id',
-        'feature',
+        'name',
     ];
 
     public function plan(): BelongsTo
