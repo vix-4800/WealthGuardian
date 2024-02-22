@@ -9,6 +9,13 @@ use App\Services\AccountService;
 
 class AccountController extends Controller
 {
+    private AccountService $service;
+
+    public function __construct(AccountService $service)
+    {
+        $this->service = $service;
+    }
+
     public function accounts()
     {
         return view('pages.profile.accounts.showAll', [
@@ -25,7 +32,7 @@ class AccountController extends Controller
     {
         $validated = $request->validated();
 
-        (new AccountService)->store($validated);
+        $this->service->store($validated);
 
         return redirect()->route('accounts.show');
     }
