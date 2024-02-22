@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\Profile\AccountController;
+use App\Http\Controllers\Profile\DashboardController;
 use Illuminate\Support\Facades\Route;
 
-Route::controller(App\Http\Controllers\PageController::class)->group(function () {
+Route::controller(PageController::class)->group(function () {
     Route::get('/', 'main')->name('main');
     Route::get('/about', 'about')->name('about');
     Route::get('/contact', 'contact')->name('contact');
@@ -14,10 +17,10 @@ Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
-])->controller(App\Http\Controllers\ProfileController::class)->group(function () {
-    Route::get('/dashboard', 'dashboard')->name('dashboard');
+])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
-    Route::name('accounts.')->prefix('accounts')->group(function () {
+    Route::name('accounts.')->prefix('accounts')->controller(AccountController::class)->group(function () {
         Route::get('/', 'accounts')->name('show');
 
         Route::get('/add', 'add')->name('add');
