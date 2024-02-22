@@ -35,6 +35,12 @@
                         {{ __('Accounts') }}
                     </x-nav-link>
                 </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('cards.show') }}" :active="Str::startsWith(Route::currentRouteName(), 'cards')">
+                        {{ __('Cards') }}
+                    </x-nav-link>
+                </div>
                 @endadmin
 
             </div>

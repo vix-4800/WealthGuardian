@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Profile\AccountController;
+use App\Http\Controllers\Profile\CardController;
 use App\Http\Controllers\Profile\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,5 +30,11 @@ Route::middleware([
         Route::get('/{accountId}', 'select')->name('select');
 
         Route::get('/{account}/delete', 'delete')->name('delete');
+    });
+
+    Route::name('cards.')->prefix('cards')->controller(CardController::class)->group(function () {
+        Route::get('/', 'cards')->name('show');
+
+        Route::get('/add', 'add')->name('add');
     });
 });
