@@ -9,7 +9,7 @@
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="overflow-hidden bg-white shadow-xl sm:rounded-lg">
                 <div class="relative overflow-x-auto">
-                    <div class="grid grid-cols-3">
+                    <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
                         @foreach ($accounts as $account)
                         <div class="w-full max-w-sm p-4 bg-white rounded-lg dark:bg-gray-800 md:p-6">
                             <a href="{{route('accounts.select',['accountId'=>$account['id']])}}">
