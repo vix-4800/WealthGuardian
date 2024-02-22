@@ -126,4 +126,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(SubscriptionPlan::class);
     }
+    public function bankCards(): HasMany
+    {
+        return $this->hasMany(BankCard::class);
+    }
 }

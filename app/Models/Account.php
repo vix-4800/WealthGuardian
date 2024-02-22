@@ -46,16 +46,21 @@ class Account extends Model
 
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class);
     }
 
     public function expenses(): HasMany
     {
-        return $this->hasMany(Expense::class, 'account_id');
+        return $this->hasMany(Expense::class);
     }
 
     public function incomes(): HasMany
     {
-        return $this->hasMany(Income::class, 'account_id');
+        return $this->hasMany(Income::class);
+    }
+
+    public function bankCards(): HasMany
+    {
+        return $this->hasMany(BankCard::class);
     }
 }
