@@ -37,7 +37,7 @@
                                     <div class="flex justify-between">
                                         {{ ucfirst($account->type) }}
                                         <div>
-                                            <a href="{{route('accounts.select',['accountId'=>$account->id])}}" class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+                                            <a href="{{route('accounts.select',['account'=>$account->id])}}" class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
                                                 View
                                             </a>
                                             <a href="{{route('accounts.delete',['account'=>$account->id])}}" class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">

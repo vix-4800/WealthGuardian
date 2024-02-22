@@ -12,7 +12,7 @@
                     <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
                         @foreach ($accounts as $account)
                         <div class="w-full max-w-sm p-4 bg-white rounded-lg dark:bg-gray-800 md:p-6">
-                            <a href="{{route('accounts.select',['accountId'=>$account['id']])}}">
+                            <a href="{{route('accounts.select',['account'=>$account['id']])}}">
                                 <div class="p-3 border rounded-md bg-slate-200 hover:bg-slate-300">
                                     <span>
                                         {{$account['name']}}
