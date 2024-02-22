@@ -32,9 +32,8 @@ class AccountController extends Controller
         return redirect()->route('accounts.show');
     }
 
-    public function select(int $accountId)
+    public function select(Account $account)
     {
-        $account = Account::find($accountId);
         $expenses = $account->expenses;
         $incomes = $account->incomes;
 
