@@ -19,6 +19,9 @@
                                 <th scope="col" class="px-6 py-3">
                                     Balance
                                 </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Type
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,8 +31,11 @@
                                     {{ $account->name }}
                                 </th>
                                 <td class="px-6 py-4">
+                                    ${{ $account->balance }}
+                                </td>
+                                <td class="px-6 py-4">
                                     <div class="flex justify-between">
-                                        {{ $account->balance }}
+                                        {{ ucfirst($account->type) }}
                                         <div>
                                             <a href="{{route('accounts.select',['accountId'=>$account->id])}}" class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
                                                 View

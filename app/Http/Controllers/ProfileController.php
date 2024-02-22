@@ -51,6 +51,7 @@ class ProfileController extends Controller
             'user_id' => auth()->id(),
             'name' => $request['name'],
             'balance' => $request['balance'],
+            'type' => $request['type'],
         ]);
 
         return redirect()->route('accounts.show');
