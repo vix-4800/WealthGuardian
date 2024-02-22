@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('card_number');
             $table->enum('card_type', [
                 BankCard::TYPE_CREDIT,
-                BankCard::TYPE_DEBIT
+                BankCard::TYPE_DEBIT,
             ]);
             $table->string('bank');
 

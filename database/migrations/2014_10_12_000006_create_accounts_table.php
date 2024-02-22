@@ -22,7 +22,7 @@ return new class extends Migration
                 Account::TYPE_CARD,
                 Account::TYPE_CASH,
                 Account::TYPE_E_WALLET,
-                Account::TYPE_DEPOSIT
+                Account::TYPE_DEPOSIT,
             ]);
 
             $table->timestamps();
