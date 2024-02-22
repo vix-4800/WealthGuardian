@@ -7,10 +7,17 @@ use App\Services\DashboardService;
 
 class DashboardController extends Controller
 {
+    private DashboardService $service;
+
+    public function __construct(DashboardService $service)
+    {
+        $this->service = $service;
+    }
+
     public function dashboard()
     {
         return view('pages.profile.dashboard', [
-            'accounts' => (new DashboardService)->getAccounts(),
+            'accounts' => $this->service->getAccounts(),
         ]);
     }
 }
