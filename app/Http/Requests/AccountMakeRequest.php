@@ -24,6 +24,7 @@ class AccountMakeRequest extends FormRequest
         return [
             'name' => 'required|max:50',
             'balance' => 'required|numeric|min:0',
+            'type' => 'required'
         ];
     }
 }
