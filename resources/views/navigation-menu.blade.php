@@ -41,8 +41,13 @@
                         {{ __('Cards') }}
                     </x-nav-link>
                 </div>
-                @endadmin
 
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('family') }}" :active="request()->routeIs('family')">
+                        {{ __('Family') }}
+                    </x-nav-link>
+                </div>
+                @endadmin
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">

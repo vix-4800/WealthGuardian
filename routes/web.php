@@ -5,6 +5,7 @@ use App\Http\Controllers\Profile\AccountController;
 use App\Http\Controllers\Profile\CardController;
 use App\Http\Controllers\Profile\CategoryController;
 use App\Http\Controllers\Profile\DashboardController;
+use App\Http\Controllers\Profile\FamilyController;
 use Illuminate\Support\Facades\Route;
 
 Route::controller(PageController::class)->group(function () {
@@ -44,4 +45,5 @@ Route::middleware([
     Route::name('categories.')->prefix('categories')->controller(CategoryController::class)->group(function () {
         Route::post('/{account}/new-record/{type}', 'add')->name('add');
     });
+    Route::get('/family', [FamilyController::class, 'index'])->name('family');
 });

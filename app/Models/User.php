@@ -76,6 +76,9 @@ use Laravel\Sanctum\HasApiTokens;
  * @property-read int|null $income_categories_count
  *
  * @method static \Illuminate\Database\Eloquent\Builder|User whereSubscriptionPlanId($value)
+ * @property int|null $family_id
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereFamilyId($value)
+ * @property-read \App\Models\Family|null $family
  *
  * @mixin \Eloquent
  */
@@ -159,5 +162,10 @@ class User extends Authenticatable
     public function bankCards(): HasMany
     {
         return $this->hasMany(BankCard::class);
+    }
+
+    public function family(): HasOne
+    {
+        return $this->hasOne(Family::class);
     }
 }

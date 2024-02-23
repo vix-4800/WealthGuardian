@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('profile_photo_path', 2048)->nullable();
             $table->boolean('admin')->default(false);
             $table->foreignId('subscription_plan_id')->default(1)->constrained('subscription_plans')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('family_id')->nullable()->constrained('families')->cascadeOnDelete()->cascadeOnUpdate();
 
             $table->timestamps();
         });
