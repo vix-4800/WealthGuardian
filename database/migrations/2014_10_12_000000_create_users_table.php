@@ -24,6 +24,7 @@ return new class extends Migration
             $table->boolean('admin')->default(false);
             $table->foreignId('subscription_plan_id')->default(1)->constrained('subscription_plans')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('family_id')->nullable()->constrained('families')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('organization_id')->nullable()->constrained('organizations')->cascadeOnDelete()->cascadeOnUpdate();
 
             $table->timestamps();
         });
