@@ -43,7 +43,7 @@
     <header class="fixed w-full">
         <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-                <a href="#" class="flex items-center">
+                <a href="{{route('main')}}" class="flex items-center">
                     <img src="{{asset('img/logo.png')}}" class="h-6 mr-3 rounded-md sm:h-9" alt="Wealth Guardian Logo" />
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                         Wealth Guardian
@@ -91,7 +91,6 @@
         </div>
     </main>
 
-    <!-- End block -->
     <footer class="bg-white dark:bg-gray-800">
         <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
             <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-3">
@@ -150,7 +149,7 @@
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
             <div class="text-center">
                 <div class="flex items-center justify-center">
-                    <a href="#" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
+                    <a href="{{route('main')}}" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
                         <img src="{{asset('img/logo.png')}}" class="h-6 mr-3 rounded-md sm:h-9" alt="Wealth Guardian Logo" />
                         Wealth Guardian
                     </a>
