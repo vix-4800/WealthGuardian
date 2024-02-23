@@ -50,4 +50,21 @@ class AccountController extends Controller
 
         return back();
     }
+
+    public function newRecord(Account $account, string $type)
+    {
+        abort_if($type !== 'income' && $type !== 'expense', 401);
+
+        if ($type === 'income') {
+            $userTypes = auth()->user()->incomeTypes;
+        } else {
+            $userTypes = auth()->user()->expenseTypes;
+        }
+
+        return view('pages.profile.accounts.newRecord', [
+            'account' => $account,
+            'type' => $type,
+            'types' => $userTypes,
+        ]);
+    }
 }
