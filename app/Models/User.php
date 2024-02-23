@@ -89,7 +89,7 @@ class User extends Authenticatable
         'email',
         'password',
         'admin',
-        'subscription_player_id',
+        'subscription_plan_id',
     ];
 
     /**
