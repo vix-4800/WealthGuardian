@@ -23,11 +23,6 @@ class AccountController extends Controller
         ]);
     }
 
-    public function add()
-    {
-        return view('pages.profile.accounts.add');
-    }
-
     public function store(AccountMakeRequest $request)
     {
         $validated = $request->validated();

@@ -24,7 +24,7 @@ Route::middleware([
     Route::name('accounts.')->prefix('accounts')->controller(AccountController::class)->group(function () {
         Route::get('/', 'accounts')->name('show');
 
-        Route::get('/add', 'add')->name('add');
+        Route::view('/add', 'pages.profile.accounts.add')->name('add');
         Route::post('/add', 'store')->name('store');
 
         Route::get('/{account}', 'select')->name('select');
