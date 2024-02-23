@@ -8,9 +8,9 @@
                     freedom.
                 </h1>
                 <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-                    Master your finances with Wealth Guardian, the intuitive Personal Finance Tracker.
+                    Master your finances with {{ config('app.name') }}, the intuitive Personal Finance Tracker.
                     This intuitive app is meticulously crafted with user-friendly features, utilizing advanced technologies
-                    for seamless financial management. Wealth Guardian simplifies income tracking,
+                    for seamless financial management. {{ config('app.name') }} simplifies income tracking,
                     expense management, and budgeting, offering you a holistic view of your financial landscape.
                 </p>
                 <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
@@ -40,7 +40,7 @@
                     </p>
                     <p class="mb-8 font-light lg:text-xl">
                         Streamline development workflows, enhance knowledge management, and achieve seamless
-                        continuous integration and deployment. Experience fast service delivery with Wealth Guardian –
+                        continuous integration and deployment. Experience fast service delivery with {{ config('app.name') }} –
                         simplicity without compromise.
                     </p>
                 </div>
@@ -206,7 +206,7 @@
                 </svg>
                 <blockquote>
                     <p class="text-xl font-medium text-gray-900 md:text-2xl dark:text-white">
-                        "Wealth Guardian is absolutely fantastic. Packed with a myriad of prebuilt features,
+                        "{{ config('app.name') }} is absolutely fantastic. Packed with a myriad of prebuilt features,
                         from income tracking to intuitive expense management, it covers everything you need for effective financial control.
                         An ideal pick for anyone seeking a seamless personal finance tracker app."
                     </p>
@@ -233,7 +233,7 @@
                     Tailored for financial success
                 </h2>
                 <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
-                    Wealth Guardian is dedicated to serving business teams like yours.
+                    {{ config('app.name') }} is dedicated to serving business teams like yours.
                     Our focus lies in sectors where technology, innovation, and strategic financial management
                     can unlock enduring value and fuel sustained economic growth
                 </p>
@@ -293,7 +293,7 @@
                     <h3 id="accordion-flush-heading-1">
                         <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
                             <span>
-                                Can I use Wealth Guardian on multiple devices?
+                                Can I use {{ config('app.name') }} on multiple devices?
                             </span>
                             <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd">
@@ -304,7 +304,7 @@
                     <div id="accordion-flush-body-1" class="" aria-labelledby="accordion-flush-heading-1">
                         <div class="py-5 border-b border-gray-200 dark:border-gray-700">
                             <p class="mb-2 text-gray-500 dark:text-gray-400">
-                                Absolutely! Wealth Guardian is designed to be accessible across various devices, ensuring you have the flexibility
+                                Absolutely! {{ config('app.name') }} is designed to be accessible across various devices, ensuring you have the flexibility
                                 to manage your finances seamlessly from your desktop, tablet, or smartphone.
                             </p>
                         </div>
@@ -312,7 +312,7 @@
                     <h3 id="accordion-flush-heading-2">
                         <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
                             <span>
-                                What features does Wealth Guardian offer for budgeting?
+                                What features does {{ config('app.name') }} offer for budgeting?
                             </span>
                             <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd">
@@ -323,7 +323,7 @@
                     <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
                         <div class="py-5 border-b border-gray-200 dark:border-gray-700">
                             <p class="mb-2 text-gray-500 dark:text-gray-400">
-                                Wealth Guardian provides a comprehensive budgeting feature, allowing you to set, track,
+                                {{ config('app.name') }} provides a comprehensive budgeting feature, allowing you to set, track,
                                 and manage your budgets effortlessly. Receive real-time alerts and insights to
                                 stay on top of your financial goals.
                             </p>
@@ -351,7 +351,7 @@
                     <h3 id="accordion-flush-heading-4">
                         <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
                             <span>
-                                Does Wealth Guardian support multiple currencies?
+                                Does {{ config('app.name') }} support multiple currencies?
                             </span>
                             <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd">
@@ -362,7 +362,7 @@
                     <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
                         <div class="py-5 border-b border-gray-200 dark:border-gray-700">
                             <p class="mb-2 text-gray-500 dark:text-gray-400">
-                                Absolutely! Wealth Guardian is equipped to handle multiple currencies, making it
+                                Absolutely! {{ config('app.name') }} is equipped to handle multiple currencies, making it
                                 suitable for users with diverse financial portfolios or international transactions.
                             </p>
                         </div>
@@ -376,7 +376,7 @@
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
             <div class="max-w-screen-sm mx-auto text-center">
                 <h2 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">
-                    Start using Wealth Guardian now!
+                    Start using {{ config('app.name') }} now!
                 </h2>
                 <a href="{{route('register')}}" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800">
                     Create an account

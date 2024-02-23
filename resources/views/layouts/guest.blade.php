@@ -41,12 +41,12 @@
 </head>
 <body>
     <header class="fixed w-full">
-        <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
+        <nav class=" border-gray-200 bg-purple-100 py-2.5 dark:bg-gray-900">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="{{route('main')}}" class="flex items-center">
-                    <img src="{{asset('img/logo.png')}}" class="h-6 mr-3 rounded-md sm:h-9" alt="Wealth Guardian Logo" />
+                    <img src="{{asset('img/logo.png')}}" class="h-6 mr-3 rounded-md sm:h-9" alt="{{ config('app.name') }} Logo" />
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-                        Wealth Guardian
+                        {{ config('app.name') }}
                     </span>
                 </a>
                 <div class="flex items-center lg:order-2">
@@ -91,7 +91,7 @@
         </div>
     </main>
 
-    <footer class="bg-white dark:bg-gray-800">
+    <footer class="bg-purple-100 dark:bg-gray-800">
         <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
             <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-3">
                 <div>
@@ -150,8 +150,8 @@
             <div class="text-center">
                 <div class="flex items-center justify-center">
                     <a href="{{route('main')}}" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
-                        <img src="{{asset('img/logo.png')}}" class="h-6 mr-3 rounded-md sm:h-9" alt="Wealth Guardian Logo" />
-                        Wealth Guardian
+                        <img src="{{asset('img/logo.png')}}" class="h-6 mr-3 rounded-md sm:h-9" alt="{{ config('app.name') }} Logo" />
+                        {{ config('app.name') }}
                     </a>
                 </div>
                 <span class="block text-sm text-center text-gray-500 dark:text-gray-400">
