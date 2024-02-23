@@ -16,7 +16,7 @@ return new class extends Migration
 
             $table->foreignId('account_id')->constrained('accounts')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('name');
-            $table->foreignId('type_id')->nullable()->constrained('expense_types')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('category_id')->nullable()->constrained('expense_categories')->cascadeOnDelete()->cascadeOnUpdate();
             $table->integer('amount');
             $table->date('date');
 

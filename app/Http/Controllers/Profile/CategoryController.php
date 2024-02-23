@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Profile;
 
 use App\Http\Controllers\Controller;
 use App\Models\Account;
-use App\Models\IncomeType;
+use App\Models\IncomeCategory;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -12,9 +12,9 @@ class CategoryController extends Controller
     public function add(Request $request, Account $account, string $type)
     {
         if ($type === 'income') {
-            IncomeType::create([
+            IncomeCategory::create([
                 'user_id' => auth()->id(),
-                'name' => $request['name']
+                'name' => $request['name'],
             ]);
         }
 

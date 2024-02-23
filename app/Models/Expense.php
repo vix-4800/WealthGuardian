@@ -35,6 +35,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Expense whereTypeId($value)
  *
+ * @property int|null $category_id
+ * @property-read \App\Models\ExpenseCategory|null $category
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Expense whereCategoryId($value)
+ *
  * @mixin \Eloquent
  */
 class Expense extends Model
@@ -44,7 +49,7 @@ class Expense extends Model
     protected $fillable = [
         'name',
         'account_id',
-        'type_id',
+        'category_id',
         'amount',
         'date',
     ];
@@ -52,5 +57,10 @@ class Expense extends Model
     public function account(): BelongsTo
     {
         return $this->belongsTo(Account::class);
+    }
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(ExpenseCategory::class);
     }
 }

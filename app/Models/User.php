@@ -61,13 +61,21 @@ use Laravel\Sanctum\HasApiTokens;
  * @property int $subscription_player_id
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\BankCard> $bankCards
  * @property-read int|null $bank_cards_count
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\ExpenseType> $expensesTypes
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\ExpenseCategory> $expensesTypes
  * @property-read int|null $expenses_types_count
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\IncomeType> $incomeTypes
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\IncomeCategory> $incomeTypes
  * @property-read int|null $income_types_count
  * @property-read \App\Models\SubscriptionPlan|null $subscriptionPlan
  *
  * @method static \Illuminate\Database\Eloquent\Builder|User whereSubscriptionPlayerId($value)
+ *
+ * @property int $subscription_plan_id
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\ExpenseCategory> $expensesCategories
+ * @property-read int|null $expenses_categories_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\IncomeCategory> $incomeCategories
+ * @property-read int|null $income_categories_count
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereSubscriptionPlanId($value)
  *
  * @mixin \Eloquent
  */
@@ -138,14 +146,14 @@ class User extends Authenticatable
         return $this->hasOne(SubscriptionPlan::class);
     }
 
-    public function expensesTypes(): HasMany
+    public function expensesCategories(): HasMany
     {
-        return $this->hasMany(ExpenseType::class);
+        return $this->hasMany(ExpenseCategory::class);
     }
 
-    public function incomeTypes(): HasMany
+    public function incomeCategories(): HasMany
     {
-        return $this->hasMany(IncomeType::class);
+        return $this->hasMany(IncomeCategory::class);
     }
 
     public function bankCards(): HasMany

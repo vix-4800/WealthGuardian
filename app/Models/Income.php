@@ -35,6 +35,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Income whereTypeId($value)
  *
+ * @property int|null $category_id
+ * @property-read \App\Models\IncomeCategory|null $category
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Income whereCategoryId($value)
+ *
  * @mixin \Eloquent
  */
 class Income extends Model
@@ -44,7 +49,7 @@ class Income extends Model
     protected $fillable = [
         'name',
         'account_id',
-        'type_id',
+        'category_id',
         'amount',
         'date',
     ];
@@ -52,5 +57,10 @@ class Income extends Model
     public function account(): BelongsTo
     {
         return $this->belongsTo(Account::class);
+    }
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(IncomeCategory::class);
     }
 }
