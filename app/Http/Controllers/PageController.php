@@ -8,9 +8,9 @@ class PageController extends Controller
 {
     public function main()
     {
-        $plans = SubscriptionPlan::with('features')->get();
-
-        return view('pages.main', compact('plans'));
+        return view('pages.main', [
+            'plans' => SubscriptionPlan::with('features')->get()
+        ]);
     }
 
     public function about()
@@ -25,7 +25,9 @@ class PageController extends Controller
 
     public function plans()
     {
-        return view('pages.plans');
+        return view('pages.plans', [
+            'plans' => SubscriptionPlan::with('features')->get()
+        ]);
     }
 
     public function features()
