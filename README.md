@@ -21,4 +21,4 @@ Wealth Guardian is your trusted companion on the journey to financial prosperity
 
 ## After installation
 
-Now you can access the website at [this url](https://localhost:80)
+Now you can access the website [here](http://localhost:80) (for docker) or [here](http://localhost:8000) (for `artisan serve`)
