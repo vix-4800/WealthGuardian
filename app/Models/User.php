@@ -152,7 +152,7 @@ class User extends Authenticatable
 
     public function subscriptionPlan(): HasOne
     {
-        return $this->hasOne(SubscriptionPlan::class);
+        return $this->hasOne(SubscriptionPlan::class, 'id', 'subscription_plan_id');
     }
 
     public function expensesCategories(): HasMany

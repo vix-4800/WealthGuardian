@@ -7,6 +7,7 @@ use App\Http\Controllers\Profile\CategoryController;
 use App\Http\Controllers\Profile\DashboardController;
 use App\Http\Controllers\Profile\FamilyController;
 use App\Http\Controllers\Profile\OrganizationController;
+use App\Http\Controllers\Profile\SubscriptionController;
 use Illuminate\Support\Facades\Route;
 
 Route::controller(PageController::class)->group(function () {
@@ -50,4 +51,6 @@ Route::middleware([
     Route::get('/subscription', [SubscriptionController::class, 'index'])->name('subscription');
 
     Route::get('/family', [FamilyController::class, 'index'])->name('family');
+
+    Route::get('/organization', [OrganizationController::class, 'index'])->name('organization');
 });
