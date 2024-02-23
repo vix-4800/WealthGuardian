@@ -9,7 +9,7 @@ class PageController extends Controller
     public function main()
     {
         return view('pages.main', [
-            'plans' => SubscriptionPlan::with('features')->get()
+            'plans' => SubscriptionPlan::with('features')->get(),
         ]);
     }
 
@@ -26,7 +26,7 @@ class PageController extends Controller
     public function plans()
     {
         return view('pages.plans', [
-            'plans' => SubscriptionPlan::with('features')->get()
+            'plans' => SubscriptionPlan::with('features')->get(),
         ]);
     }
 
