@@ -47,7 +47,7 @@ class SubscriptionPlanFeatureSeeder extends Seeder
         // Third plan
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 3,
-            'name' => 'Individual, family, and business configurations',
+            'name' => 'Individual and business configurations',
         ]);
         SubscriptionPlanFeature::create([
             'subscription_plan_id' => 3,
