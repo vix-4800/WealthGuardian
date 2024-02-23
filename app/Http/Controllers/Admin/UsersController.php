@@ -1,17 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class UsersController extends Controller
 {
-    public function dashboard()
-    {
-        return view('pages.profile.admin.dashboard');
-    }
-
-    public function users()
+    public function index()
     {
         return view('pages.profile.admin.users', [
             'users' => User::get([
