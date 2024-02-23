@@ -85,9 +85,11 @@
         </nav>
     </header>
 
-    <div class="font-sans antialiased text-gray-900">
-        {{ $slot }}
-    </div>
+    <main>
+        <div class="font-sans antialiased text-gray-900">
+            {{ $slot }}
+        </div>
+    </main>
 
     <!-- End block -->
     <footer class="bg-white dark:bg-gray-800">
