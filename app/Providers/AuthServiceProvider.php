@@ -31,8 +31,8 @@ class AuthServiceProvider extends ServiceProvider
             return auth()->check() && auth()->user()->canHaveOrganization();
         });
 
-        Gate::define('join_family', function () {
-            return auth()->check() && auth()->user()->canJoinFamily();
+        Gate::define('have_family', function () {
+            return auth()->check() && auth()->user()->canHaveFamily();
         });
     }
 }

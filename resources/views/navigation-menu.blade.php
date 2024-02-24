@@ -42,7 +42,7 @@
                     </x-nav-link>
                 </div>
 
-                @can('join_family')
+                @can('have_family')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('family.index') }}" :active="Str::startsWith(Route::currentRouteName(), 'family')">
                         {{ __('Family') }}

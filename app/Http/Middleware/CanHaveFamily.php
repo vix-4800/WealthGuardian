@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class CanJoinFamily
+class CanHaveFamily
 {
     /**
      * Handle an incoming request.
@@ -15,7 +15,7 @@ class CanJoinFamily
      */
     public function handle(Request $request, Closure $next): Response
     {
-        abort_unless(auth()->user()->canJoinFamily(), Response::HTTP_FORBIDDEN);
+        abort_unless(auth()->user()->canHaveFamily(), Response::HTTP_FORBIDDEN);
 
         return $next($request);
     }

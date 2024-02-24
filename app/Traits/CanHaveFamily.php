@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 
 trait CanHaveFamily
 {
-    public function canJoinFamily(): bool
+    public function canHaveFamily(): bool
     {
         return $this->subscriptionPlan->id === 2;
     }
