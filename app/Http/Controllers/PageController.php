@@ -13,40 +13,10 @@ class PageController extends Controller
         ]);
     }
 
-    public function about()
-    {
-        return view('pages.main_website.about');
-    }
-
-    public function contact()
-    {
-        return view('pages.main_website.contact');
-    }
-
     public function plans()
     {
         return view('pages.main_website.plans', [
             'plans' => SubscriptionPlan::with('features')->get(),
         ]);
-    }
-
-    public function features()
-    {
-        return view('pages.main_website.features');
-    }
-
-    public function terms()
-    {
-        return view('pages.main_website.terms');
-    }
-
-    public function policy()
-    {
-        return view('pages.main_website.policy');
-    }
-
-    public function license()
-    {
-        return view('pages.main_website.license');
     }
 }
