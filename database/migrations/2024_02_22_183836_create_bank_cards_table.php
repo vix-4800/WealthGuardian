@@ -17,7 +17,7 @@ return new class extends Migration
 
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('account_id')->nullable()->constrained('accounts')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->string('card_number');
+            $table->string('card_number')->unique();
             $table->enum('card_type', [
                 BankCard::TYPE_CREDIT,
                 BankCard::TYPE_DEBIT,
