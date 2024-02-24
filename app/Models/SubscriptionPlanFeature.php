@@ -24,6 +24,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property string $name
  *
  * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionPlanFeature whereName($value)
+ * @method static \Database\Factories\SubscriptionPlanFeatureFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */
