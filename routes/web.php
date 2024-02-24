@@ -16,6 +16,7 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/contact', 'contact')->name('contact');
     Route::get('/plans', 'plans')->name('plans');
     Route::get('/features', 'features')->name('features');
+    Route::get('/terms', 'terms')->name('terms');
 });
 
 Route::middleware([

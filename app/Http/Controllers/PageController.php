@@ -34,4 +34,9 @@ class PageController extends Controller
     {
         return view('pages.main_website.features');
     }
+
+    public function terms()
+    {
+        return view('pages.main_website.terms');
+    }
 }
