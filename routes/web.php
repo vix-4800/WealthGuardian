@@ -18,6 +18,7 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/features', 'features')->name('features');
     Route::get('/terms', 'terms')->name('terms');
     Route::get('/license', 'license')->name('license');
+    Route::get('/policy', 'policy')->name('policy');
 });
 
 Route::middleware([
