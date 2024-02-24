@@ -25,9 +25,7 @@ class AccountController extends Controller
 
     public function store(AccountMakeRequest $request)
     {
-        $validated = $request->validated();
-
-        $this->service->store($validated);
+        $this->service->store($request->validated());
 
         return redirect()->route('accounts.show');
     }
