@@ -8,30 +8,30 @@ class PageController extends Controller
 {
     public function main()
     {
-        return view('pages.main', [
+        return view('pages.main_website.main', [
             'plans' => SubscriptionPlan::with('features')->get(),
         ]);
     }
 
     public function about()
     {
-        return view('pages.about');
+        return view('pages.main_website.about');
     }
 
     public function contact()
     {
-        return view('pages.contact');
+        return view('pages.main_website.contact');
     }
 
     public function plans()
     {
-        return view('pages.plans', [
+        return view('pages.main_website.plans', [
             'plans' => SubscriptionPlan::with('features')->get(),
         ]);
     }
 
     public function features()
     {
-        return view('pages.features');
+        return view('pages.main_website.features');
     }
 }

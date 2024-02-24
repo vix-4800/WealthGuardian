@@ -1,9 +1,9 @@
 <x-guest-layout>
-    <section class="pt-24">
+    <section class="pt-24 space-y-10">
         @foreach ($plans as $index => $plan)
-        <div class="max-w-screen-lg mx-auto space-y-12 bg-purple-200 border rounded-lg hover:bg-purple-300 hover:border-purple-500 lg:space-y-20 lg:my-10 ">
-            <a href="{{route('subscription')}}">
-                <div class="px-4 py-8 lg:py-5 lg:px-6">
+        <div class="max-w-screen-lg mx-auto space-y-12 bg-purple-100 border rounded-lg hover:bg-purple-300 hover:shadow-2xl hover:border-purple-500 lg:space-y-20 lg:my-10 ">
+            <a href="{{route('subscription.index')}}">
+                <div class="px-4 py-8 lg:py-5 lg:px-6 sm:mx-5">
                     <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-2">
                         <img class="hidden mb-4 rounded-lg w-96 lg:mb-0 lg:flex" src="{{asset('img/subscription_plan/plan_cover_'.($index + 1).'.png')}}" alt="Plan #{{ $index + 1 }} Image">
                         <div class="text-gray-500 sm:text-lg dark:text-gray-400">
