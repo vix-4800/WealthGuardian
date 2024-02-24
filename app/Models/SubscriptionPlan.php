@@ -23,6 +23,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionPlan whereDescription($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionPlan whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionPlan whereName($value)
+ * @method static \Database\Factories\SubscriptionPlanFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */
