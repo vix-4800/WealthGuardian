@@ -55,5 +55,5 @@ Route::middleware([
 
     Route::get('/family', [FamilyController::class, 'index'])->middleware('can_join_family')->name('family');
 
-    Route::get('/organization', [OrganizationController::class, 'index'])->name('organization');
+    Route::get('/organization', [OrganizationController::class, 'index'])->middleware('can_join_organization')->name('organization');
 });

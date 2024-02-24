@@ -160,6 +160,11 @@ class User extends Authenticatable
         return $this->subscriptionPlan->id === 2;
     }
 
+    public function canJoinOrganization(): bool
+    {
+        return $this->subscriptionPlan->id === 3;
+    }
+
     public function expensesCategories(): HasMany
     {
         return $this->hasMany(ExpenseCategory::class);
