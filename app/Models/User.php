@@ -3,13 +3,15 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Traits\CanHaveFamily;
+use App\Traits\CanHaveOrganization;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
-use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
 /**
@@ -85,6 +87,8 @@ use Laravel\Sanctum\HasApiTokens;
  */
 class User extends Authenticatable
 {
+    use CanHaveFamily;
+    use CanHaveOrganization;
     use HasApiTokens;
     use HasFactory;
     use Notifiable;
@@ -140,16 +144,6 @@ class User extends Authenticatable
         return $this->hasOne(SubscriptionPlan::class, 'id', 'subscription_plan_id');
     }
 
-    public function canJoinFamily(): bool
-    {
-        return $this->subscriptionPlan->id === 2;
-    }
-
-    public function canJoinOrganization(): bool
-    {
-        return $this->subscriptionPlan->id === 3;
-    }
-
     public function expensesCategories(): HasMany
     {
         return $this->hasMany(ExpenseCategory::class);
@@ -163,15 +157,5 @@ class User extends Authenticatable
     public function bankCards(): HasMany
     {
         return $this->hasMany(BankCard::class);
-    }
-
-    public function family(): HasOne
-    {
-        return $this->hasOne(Family::class);
-    }
-
-    public function organization(): HasOne
-    {
-        return $this->hasOne(Organization::class);
     }
 }
