@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 /**
  * App\Models\Family
@@ -36,4 +38,14 @@ class Family extends Model
         'creator',
         'invitation_code',
     ];
+
+    public function familyCreator(): HasOne
+    {
+        return $this->hasOne(User::class, 'id', 'creator');
+    }
+
+    public function members(): HasMany
+    {
+        return $this->hasMany(User::class, 'family_id');
+    }
 }

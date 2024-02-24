@@ -58,7 +58,10 @@ Route::middleware([
 
     Route::controller(FamilyController::class)->middleware('can_have_family')->name('family.')->group(function () {
         Route::get('/family', 'index')->name('index');
+        Route::view('/family/join', 'pages.profile.families.join')->name('join.view');
+        Route::post('/family/join', 'join')->name('join.submit');
         Route::post('/family', 'create')->name('create');
+        Route::post('/family/kick/{member}', 'kick')->name('kick');
     });
 
     Route::get('/organization', [OrganizationController::class, 'index'])->middleware('can_have_organization')->name('organization');
