@@ -38,7 +38,7 @@
                                             <div class="mt-3">
                                                 @if ($subscription->id === $currentSubscription->id)
                                                 <button type="button" disabled class="text-white bg-gray-400 cursor-not-allowed focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">
-                                                    Select
+                                                    Selected
                                                 </button>
                                                 @else
                                                 <form action="{{route('subscription.change',['subscription'=>$subscription->id])}}" method="post">
