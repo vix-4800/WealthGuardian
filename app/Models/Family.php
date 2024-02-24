@@ -24,6 +24,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Family whereInvitationCode($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Family whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Family whereUpdatedAt($value)
+ * @method static \Database\Factories\FamilyFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */
