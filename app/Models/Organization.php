@@ -23,6 +23,11 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Organization whereInvitationCode($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Organization whereUpdatedAt($value)
  *
+ * @property string $name
+ *
+ * @method static \Database\Factories\OrganizationFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Organization whereName($value)
+ *
  * @mixin \Eloquent
  */
 class Organization extends Model
