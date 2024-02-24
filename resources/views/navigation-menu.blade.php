@@ -42,11 +42,13 @@
                     </x-nav-link>
                 </div>
 
+                @can('join_family')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('family') }}" :active="request()->routeIs('family')">
                         {{ __('Family') }}
                     </x-nav-link>
                 </div>
+                @endcan
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('organization') }}" :active="request()->routeIs('organization')">

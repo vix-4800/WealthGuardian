@@ -155,6 +155,11 @@ class User extends Authenticatable
         return $this->hasOne(SubscriptionPlan::class, 'id', 'subscription_plan_id');
     }
 
+    public function canJoinFamily(): bool
+    {
+        return $this->subscriptionPlan->id === 2;
+    }
+
     public function expensesCategories(): HasMany
     {
         return $this->hasMany(ExpenseCategory::class);

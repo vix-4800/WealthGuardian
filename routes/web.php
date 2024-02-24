@@ -53,7 +53,7 @@ Route::middleware([
 
     Route::get('/subscription', [SubscriptionController::class, 'index'])->name('subscription');
 
-    Route::get('/family', [FamilyController::class, 'index'])->name('family');
+    Route::get('/family', [FamilyController::class, 'index'])->middleware('can_join_family')->name('family');
 
     Route::get('/organization', [OrganizationController::class, 'index'])->name('organization');
 });
