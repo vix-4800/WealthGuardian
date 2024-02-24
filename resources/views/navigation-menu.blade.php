@@ -50,7 +50,7 @@
                 </div>
                 @endcan
 
-                @can('join_organization')
+                @can('have_organization')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('organization') }}" :active="request()->routeIs('organization')">
                         {{ __('Ogranization') }}

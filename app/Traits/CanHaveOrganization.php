@@ -12,7 +12,7 @@ trait CanHaveOrganization
         return $this->hasOne(Organization::class);
     }
 
-    public function canJoinOrganization(): bool
+    public function canHaveOrganization(): bool
     {
         return $this->subscriptionPlan->id === 3;
     }

@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class CanJoinOrganization
+class CanHaveOrganization
 {
     /**
      * Handle an incoming request.
@@ -15,7 +15,7 @@ class CanJoinOrganization
      */
     public function handle(Request $request, Closure $next): Response
     {
-        abort_unless(auth()->user()->canJoinOrganization(), Response::HTTP_FORBIDDEN);
+        abort_unless(auth()->user()->canHaveOrganization(), Response::HTTP_FORBIDDEN);
 
         return $next($request);
     }

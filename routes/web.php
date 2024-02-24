@@ -61,5 +61,5 @@ Route::middleware([
         Route::post('/family', 'create')->name('create');
     });
 
-    Route::get('/organization', [OrganizationController::class, 'index'])->middleware('can_join_organization')->name('organization');
+    Route::get('/organization', [OrganizationController::class, 'index'])->middleware('can_have_organization')->name('organization');
 });
