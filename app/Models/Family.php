@@ -28,6 +28,10 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * @method static \Illuminate\Database\Eloquent\Builder|Family whereUpdatedAt($value)
  * @method static \Database\Factories\FamilyFactory factory($count = null, $state = [])
  *
+ * @property-read \App\Models\User|null $familyCreator
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\User> $members
+ * @property-read int|null $members_count
+ *
  * @mixin \Eloquent
  */
 class Family extends Model

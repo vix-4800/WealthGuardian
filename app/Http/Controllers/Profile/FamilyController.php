@@ -41,7 +41,7 @@ class FamilyController extends Controller
 
     public function join(JoinFamilyRequest $request)
     {
-        $family = Family::where('invitation_code', $request->validated()['code'])->first();
+        $family = Family::whereInvitationCode($request->validated()['code'])->first();
 
         if (! $family) {
             return back();
