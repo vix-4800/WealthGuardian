@@ -59,7 +59,7 @@
                 @endcan
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('subscription') }}" :active="request()->routeIs('subscription')">
+                    <x-nav-link href="{{ route('subscription.index') }}" :active="request()->routeIs('subscription.index')">
                         {{ __('Subscription') }}
                     </x-nav-link>
                 </div>

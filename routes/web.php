@@ -51,7 +51,10 @@ Route::middleware([
         Route::post('/{account}/new-record/{type}', 'add')->name('add');
     });
 
-    Route::get('/subscription', [SubscriptionController::class, 'index'])->name('subscription');
+    Route::controller(SubscriptionController::class)->name('subscription.')->group(function () {
+        Route::get('/subscription', 'index')->name('index');
+        Route::post('/subscription/{subscription}', 'change')->name('change');
+    });
 
     Route::get('/family', [FamilyController::class, 'index'])->middleware('can_join_family')->name('family');
 
