@@ -21,7 +21,8 @@ return new class extends Migration
             $table->foreignId('family_id')->nullable()->constrained('families')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('organization_id')->nullable()->constrained('organizations')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();
+            $table->string('google_id')->nullable();
             $table->rememberToken();
 
             $table->timestamps();

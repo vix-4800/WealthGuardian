@@ -43,6 +43,8 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware(['web', 'auth:sanctum', 'verified', config('jetstream.auth_session')])
                 ->group(base_path('routes/profile.php'));
 
+            Route::middleware('web')
+                ->group(base_path('routes/oauth.php'));
 
             Route::middleware(['web', 'admin', 'auth:sanctum', 'verified', config('jetstream.auth_session')])
                 ->prefix('admin')

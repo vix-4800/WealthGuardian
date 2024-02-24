@@ -82,6 +82,9 @@ use Laravel\Sanctum\HasApiTokens;
  *
  * @property-read \App\Models\Family|null $family
  * @property-read \App\Models\Organization|null $organization
+ * @property string|null $google_id
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereGoogleId($value)
  *
  * @mixin \Eloquent
  */
@@ -105,6 +108,7 @@ class User extends Authenticatable
         'password',
         'admin',
         'subscription_plan_id',
+        'google_id',
     ];
 
     /**
