@@ -17,6 +17,7 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/plans', 'plans')->name('plans');
     Route::get('/features', 'features')->name('features');
     Route::get('/terms', 'terms')->name('terms');
+    Route::get('/license', 'license')->name('license');
 });
 
 Route::middleware([

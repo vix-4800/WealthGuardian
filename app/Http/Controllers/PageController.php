@@ -39,4 +39,9 @@ class PageController extends Controller
     {
         return view('pages.main_website.terms');
     }
+
+    public function license()
+    {
+        return view('pages.main_website.license');
+    }
 }
