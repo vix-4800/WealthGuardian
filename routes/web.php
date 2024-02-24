@@ -56,7 +56,10 @@ Route::middleware([
         Route::post('/subscription/{subscription}', 'change')->name('change');
     });
 
-    Route::get('/family', [FamilyController::class, 'index'])->middleware('can_join_family')->name('family');
+    Route::controller(FamilyController::class)->middleware('can_join_family')->name('family.')->group(function () {
+        Route::get('/family', 'index')->name('index');
+        Route::post('/family', 'create')->name('create');
+    });
 
     Route::get('/organization', [OrganizationController::class, 'index'])->middleware('can_join_organization')->name('organization');
 });
