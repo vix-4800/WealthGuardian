@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
         $seeders = [
             SubscriptionPlanSeeder::class,
             SubscriptionPlanFeatureSeeder::class,
+            UserSeeder::class,
         ];
 
         foreach ($seeders as $seeder) {
