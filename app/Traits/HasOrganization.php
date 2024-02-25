@@ -5,8 +5,10 @@ namespace App\Traits;
 use App\Models\Organization;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
-trait CanHaveOrganization
+trait HasOrganization
 {
+    use HasSubscription;
+
     public function organization(): HasOne
     {
         return $this->hasOne(Organization::class);

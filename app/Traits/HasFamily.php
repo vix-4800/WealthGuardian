@@ -6,8 +6,10 @@ use App\Models\Family;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Str;
 
-trait CanHaveFamily
+trait HasFamily
 {
+    use HasSubscription;
+
     public function canHaveFamily(): bool
     {
         return $this->subscriptionPlan->id === 2;

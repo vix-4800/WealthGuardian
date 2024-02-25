@@ -4,8 +4,8 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
-use App\Traits\CanHaveFamily;
-use App\Traits\CanHaveOrganization;
+use App\Traits\HasFamily;
+use App\Traits\HasOrganization;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
@@ -94,10 +94,10 @@ use Laravel\Sanctum\HasApiTokens;
  */
 class User extends Authenticatable
 {
-    use CanHaveFamily;
-    use CanHaveOrganization;
     use HasApiTokens;
     use HasFactory;
+    use HasFamily;
+    use HasOrganization;
     use Notifiable;
     use TwoFactorAuthenticatable;
 
