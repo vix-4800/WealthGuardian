@@ -3,6 +3,10 @@
 namespace App\Providers;
 
 // use Illuminate\Support\Facades\Gate;
+
+use App\Models\User;
+use App\Traits\HasFamily;
+use App\Traits\HasOrganization;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Gate;
@@ -28,11 +32,15 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         Gate::define('have_organization', function () {
-            return auth()->check() && auth()->user()->canHaveOrganization();
+            return (User::useTrait(HasOrganization::class)) ?
+                auth()->check() && auth()->user()->canHaveOrganization() :
+                false;
         });
 
         Gate::define('have_family', function () {
-            return auth()->check() && auth()->user()->canHaveFamily();
+            return (User::useTrait(HasFamily::class)) ?
+                auth()->check() && auth()->user()->canHaveFamily() :
+                false;
         });
     }
 }

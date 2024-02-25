@@ -2,6 +2,8 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\User;
+use App\Traits\HasFamily;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,7 +17,7 @@ class CanHaveFamily
      */
     public function handle(Request $request, Closure $next): Response
     {
-        abort_unless(auth()->user()->canHaveFamily(), Response::HTTP_FORBIDDEN);
+        abort_unless(User::useTrait(HasFamily::class) && auth()->user()->canHaveFamily(), Response::HTTP_FORBIDDEN);
 
         return $next($request);
     }
