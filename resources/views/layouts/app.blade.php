@@ -16,6 +16,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('img/icons/favicon-16x16.png')}}">
     <link rel="manifest" href="{{asset('site.webmanifest')}}">
 
+    <!-- Meta SEO -->
+    <meta name="title" content="WealthGuardian - Your Personal Finance Tracker">
+    <meta name="description" content="Take control of your finances with WealthGuardian, a powerful and intuitive Personal Finance Tracker app. Track income, manage expenses, and set realistic budgets effortlessly">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="VIX">
+
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
