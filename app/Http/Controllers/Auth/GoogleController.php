@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Laravel\Socialite\Facades\Socialite;
-use Symfony\Component\HttpFoundation\Response;
 
 class GoogleController extends Controller
 {
@@ -20,7 +19,7 @@ class GoogleController extends Controller
             $googleUser = Socialite::driver('google')->user();
             $authUser = User::whereGoogleId($googleUser->getId())->first();
 
-            if (!$authUser) {
+            if (! $authUser) {
                 $authUser = User::create([
                     'name' => $googleUser->getName(),
                     'email' => $googleUser->getEmail(),

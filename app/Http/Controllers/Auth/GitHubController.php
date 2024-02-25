@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Laravel\Socialite\Facades\Socialite;
-use Symfony\Component\HttpFoundation\Response;
 
 class GitHubController extends Controller
 {
@@ -20,7 +19,7 @@ class GitHubController extends Controller
             $githubUser = Socialite::driver('github')->user();
             $authUser = User::whereGithubId($githubUser->getId())->first();
 
-            if (!$authUser) {
+            if (! $authUser) {
                 $authUser = User::create([
                     'name' => $githubUser->getName(),
                     'email' => $githubUser->getEmail(),
