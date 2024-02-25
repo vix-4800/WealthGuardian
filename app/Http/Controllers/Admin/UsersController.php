@@ -14,7 +14,6 @@ class UsersController extends Controller
                 'id',
                 'name',
                 'email',
-                'profile_photo_path',
             ]),
         ]);
     }

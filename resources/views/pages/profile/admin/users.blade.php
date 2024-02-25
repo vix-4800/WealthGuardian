@@ -16,9 +16,6 @@
                                     #
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Avatar
-                                </th>
-                                <th scope="col" class="px-6 py-3">
                                     Name
                                 </th>
                                 <th scope="col" class="px-6 py-3">
@@ -33,9 +30,6 @@
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     {{ $index + 1 }}
                                 </th>
-                                <td class="px-6 py-4">
-                                    <img src="{{$user->profile_photo_path}}" alt="Profile Photo" class="w-6 h-6 rounded-xl">
-                                </td>
                                 <td class="px-6 py-4">
                                     {{$user->name}}
                                 </td>
