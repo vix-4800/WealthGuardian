@@ -17,8 +17,7 @@ class SubscriptionController extends Controller
 
     public function change(SubscriptionPlan $subscription)
     {
-        auth()->user()->subscription_plan_id = $subscription->id;
-        auth()->user()->save();
+        auth()->user()->changeSubscriptionPlan($subscription);
 
         return redirect()->back();
     }

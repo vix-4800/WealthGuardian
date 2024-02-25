@@ -6,9 +6,9 @@ namespace App\Models;
 
 use App\Traits\HasFamily;
 use App\Traits\HasOrganization;
+use App\Traits\HasSubscription;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
@@ -98,6 +98,7 @@ class User extends Authenticatable
     use HasFactory;
     use HasFamily;
     use HasOrganization;
+    use HasSubscription;
     use Notifiable;
     use TwoFactorAuthenticatable;
 
@@ -148,11 +149,6 @@ class User extends Authenticatable
         return $this->hasMany(Account::class);
     }
 
-    public function subscriptionPlan(): HasOne
-    {
-        return $this->hasOne(SubscriptionPlan::class, 'id', 'subscription_plan_id');
-    }
-
     public function expensesCategories(): HasMany
     {
         return $this->hasMany(ExpenseCategory::class);
@@ -166,5 +162,10 @@ class User extends Authenticatable
     public function bankCards(): HasMany
     {
         return $this->hasMany(BankCard::class);
+    }
+
+    public static function useTrait($trait): bool
+    {
+        return in_array($trait, class_uses_recursive(get_called_class()));
     }
 }
