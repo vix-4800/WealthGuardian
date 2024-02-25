@@ -20,7 +20,7 @@ class GitHubController extends Controller
             $githubUser = Socialite::driver('github')->user();
             $authUser = User::whereGithubId($githubUser->getId())->first();
 
-            if (! $authUser) {
+            if (!$authUser) {
                 $authUser = User::create([
                     'name' => $githubUser->getName(),
                     'email' => $githubUser->getEmail(),
@@ -32,7 +32,7 @@ class GitHubController extends Controller
 
             return redirect()->route('dashboard');
         } catch (\Throwable) {
-            abort(Response::HTTP_INTERNAL_SERVER_ERROR);
+            return redirect()->back()->withErrors('Github Authentication Error');
         }
     }
 }

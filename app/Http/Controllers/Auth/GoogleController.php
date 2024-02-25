@@ -20,7 +20,7 @@ class GoogleController extends Controller
             $googleUser = Socialite::driver('google')->user();
             $authUser = User::whereGoogleId($googleUser->getId())->first();
 
-            if (! $authUser) {
+            if (!$authUser) {
                 $authUser = User::create([
                     'name' => $googleUser->getName(),
                     'email' => $googleUser->getEmail(),
@@ -32,7 +32,7 @@ class GoogleController extends Controller
 
             return redirect()->route('dashboard');
         } catch (\Throwable) {
-            abort(Response::HTTP_INTERNAL_SERVER_ERROR);
+            return redirect()->back()->withErrors('Google Authentication Error');
         }
     }
 }
