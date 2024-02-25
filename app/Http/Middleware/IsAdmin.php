@@ -15,7 +15,11 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        abort_unless(auth()->user()->isAdmin(), Response::HTTP_FORBIDDEN, 'You are not allowed to access this page.');
+        abort_unless(
+            auth()->user()->isAdmin(),
+            Response::HTTP_FORBIDDEN,
+            'You are not allowed to access this page.'
+        );
 
         return $next($request);
     }
