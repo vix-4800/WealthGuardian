@@ -34,20 +34,30 @@ class RouteServiceProvider extends ServiceProvider
                 ->prefix('api')
                 ->group(base_path('routes/api.php'));
 
-            Route::middleware('web')->controller(PageController::class)
+            Route::middleware('web')
+                ->controller(PageController::class)
                 ->group(base_path('routes/website.php'));
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
 
-            Route::middleware(['web', 'auth:sanctum', 'verified', config('jetstream.auth_session')])
-                ->group(base_path('routes/profile.php'));
+            Route::middleware([
+                'web',
+                'auth:sanctum',
+                'verified',
+                config('jetstream.auth_session'),
+            ])->group(base_path('routes/profile.php'));
 
             Route::middleware('web')
                 ->group(base_path('routes/oauth.php'));
 
-            Route::middleware(['web', 'admin', 'auth:sanctum', 'verified', config('jetstream.auth_session')])
-                ->prefix('admin')
+            Route::middleware([
+                'web',
+                'admin',
+                'auth:sanctum',
+                'verified',
+                config('jetstream.auth_session'),
+            ])->prefix('admin')
                 ->name('admin.')
                 ->group(base_path('routes/admin.php'));
         });
