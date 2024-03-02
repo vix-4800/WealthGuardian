@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('organizations', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('creator')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('name', 25);
             $table->string('invitation_code', 10)->unique();
 
