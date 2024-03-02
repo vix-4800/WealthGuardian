@@ -1,6 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\AccountController;
+use App\Http\Controllers\Api\BankCardController;
+use App\Http\Controllers\Api\ExpenseController;
+use App\Http\Controllers\Api\IncomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +17,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::prefix('v1')
+    ->group(function () {
+        Route::apiResource('cards', BankCardController::class);
+        Route::apiResource('accounts', AccountController::class);
+        Route::apiResource('expenses', ExpenseController::class);
+        Route::apiResource('incomes', IncomeController::class);
+    });
+
+Route::fallback(function () {
+    return response()->json([
+        'status' => 422,
+        'error' => 'Invalid URL requested',
+    ])
+        ->setStatusCode(422);
 });
