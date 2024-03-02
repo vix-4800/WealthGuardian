@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Profile;
 
+use App\Enums\AccountType;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AccountMakeRequest;
 use App\Models\Account;
@@ -49,7 +50,7 @@ class AccountController extends Controller
         return back();
     }
 
-    public function newRecord(Account $account, string $type)
+    public function newRecord(Account $account, AccountType $type)
     {
         abort_if($type !== 'income' && $type !== 'expense', 401);
 

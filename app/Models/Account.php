@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\AccountType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -44,19 +45,15 @@ class Account extends Model
 {
     use HasFactory;
 
-    public const TYPE_CARD = 'card';
-
-    public const TYPE_CASH = 'cash';
-
-    public const TYPE_E_WALLET = 'e-wallet';
-
-    public const TYPE_DEPOSIT = 'deposit';
-
     protected $fillable = [
         'name',
         'user_id',
         'balance',
         'type',
+    ];
+
+    protected $casts = [
+        'type' => AccountType::class,
     ];
 
     public function user(): BelongsTo
