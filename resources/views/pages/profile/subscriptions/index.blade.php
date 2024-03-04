@@ -26,7 +26,8 @@
                                     <div class="flex gap-3">
                                         @foreach ($subscriptions as $subscription)
                                         @php
-                                        $isActive = $subscription->id === $currentSubscription->id;
+                                        $isActive = $subscription->is($currentSubscription);
+                                        // $isActive = $subscription->id === $currentSubscription->id;
                                         @endphp
                                         <div class="flex flex-col justify-between max-w-sm p-6 bg-white border {{$isActive ? 'border-green-400' : 'border-gray-200'}}  rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                                             <h5 class="flex justify-between mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
