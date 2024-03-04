@@ -2,23 +2,13 @@
 
 namespace App\Enums;
 
+use App\Traits\HasEnumValues;
+
 enum BankCardType: string
 {
+    use HasEnumValues;
+
     case CREDIT = 'credit';
 
     case DEBIT = 'debit';
-
-    /**
-     * Get all enum values
-     */
-    public static function values(): array
-    {
-        $types = [];
-
-        foreach (self::cases() as $type) {
-            $types[] = $type->value;
-        }
-
-        return $types;
-    }
 }
